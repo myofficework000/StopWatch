@@ -16,6 +16,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.android.stopwatchdemo.model.StopwatchState
 import com.android.stopwatchdemo.viewmodel.StopwatchViewModel
@@ -50,7 +51,11 @@ fun StopwatchScreen(viewModel: StopwatchViewModel = viewModel()) {
                     )
                 )
         ) {
-            Text(text = if (stopwatchState.isRunning) "STOP" else "START")
+            Text(
+                text = if (stopwatchState.isRunning) "STOP" else "START",
+                fontSize = 24.sp
+            )
+
         }
 
         Spacer(modifier = Modifier.height(50.dp))
@@ -87,7 +92,10 @@ fun StopwatchScreen(viewModel: StopwatchViewModel = viewModel()) {
                     )
                 )
         ) {
-            Text(text = "RESET")
+            Text(
+                text = "RESET",
+                fontSize = 20.sp
+            )
         }
     }
 
